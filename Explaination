@@ -1,0 +1,6 @@
+Initialization: We start by initializing jumps to 0, currentEnd to 0, and farthest to 0.
+Iteration through the array: For each airport:
+Update farthest to be the maximum of its current value and the sum of the current airport index and the fuel available at that airport (i + fuel[i]).
+If the current airport index reaches currentEnd, it means we need to hire a new plane, so we increment jumps and update currentEnd to the current farthest.
+If currentEnd reaches or exceeds the last airport, we can break out of the loop as we have found the solution.
+Checking reachability: If the loop completes and currentEnd is less than the last airport index, return -1 as it indicates the destination is not reachable. Otherwise, return the number of jumps.
